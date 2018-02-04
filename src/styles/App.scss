@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:100,300,500,700');
+@import 'normalize';
+@import 'mixins';
+//---COLORS
+
+$global-color: #00d1c0;
+$base-color: #292d2b;
+//----GENERAL
+body {
+  font-family: Raleway, arial, sans-serif;
+  background-color: white;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing: antialiased;
+  color: $base-color;
+}
+
+
+/*-- START SCREEN --*/
+
+.Start {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  color: white;
+  background: transparent url('./../imgs/cover.jpg') no-repeat;
+  background-size: cover;
+  background-position: center center;
+  @include flex-vm;
+  &>* {
+    position: relative;
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    background: #124c5e;
+    @include gradient(desaturate($global-color,
+    40%),
+    rgba($global-color,
+    0),
+    -90deg);
+  }
+  &__inner {
+    max-width: $global-width;
+    margin: 0 auto;
+    width: 90%;
+  }
+  &__group {
+    width: 50%;
+    float: right;
+    display: table;
+    text-align: right;
+  }
+  &__logo {
+    position: fixed;
+    left: 5%;
+    top: 5%;
+    @include pos_abs('left',
+    1);
+  }
+  &__title {
+    font-size: 5.5em;
+    line-height: 0.9;
+    font-weight: 100;
+  }
+  &__txt {
+    font-size: 1.6em;
+    line-height: 1.1;
+    font-weight: 500;
+    margin-top: 30px;
+  }
+  &__btn-start {
+    float: right;
+    padding: 15px 30px;
+    background: #fff;
+    color: desaturate($global-color, 20%);
+    text-transform: uppercase;
+    font-size: 1.5em;
+    margin-top: 50px;
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
+    &:hover {
+      color: #fff;
+      background: desaturate($global-color, 20%);
+    }
+    &_inactive {
+      font-size: 1.2em;
+      text-transform: none;
+      background: transparent;
+      color: #fff;
+      cursor: default;
+      border: 1px solid #fff;
+      &:hover {
+        background: transparent;
+        color: #fff;
+      }
+      a {
+        color: white;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+
+/*-- SIGN-IN  --*/
+
+.Sign {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(desaturate($global-color, 10%), 0.7);
+  &__inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include transform(translate(-50%,
+    -50%));
+    max-width: 500px;
+    width: 90%;
+    max-height: 60vh;
+    overflow: auto;
+    background: #fff;
+    padding: 40px;
+    
+    box-sizing: border-box;
+
+  }
+  &__title {
+    text-align: center;
+    font-weight: 700;
+    color: $global-color;
+    font-size: 2em;
+    margin-bottom: 30px;
+  }
+  &__btn-start {
+    float: right;
+    padding: 10px 25px;
+    background: $global-color;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    margin-top: 50px;
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
+    &:hover {
+      color: #fff;
+      background: desaturate($global-color, 30%);
+    }
+  }
+  &__form{
+    width: 90%;
+    margin: 0 auto;
+
+  }
+  &__input{
+    border: 1px solid $global-color;
+    padding: 5px;
+    height: 40px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: all 200ms ease;
+    &:focus{
+      outline: 0;
+      border-bottom-width: 3px;
+      padding-bottom: 3px;
+    }
+  }
+  &__label{
+    color:$global-color;
+    margin-bottom: 10px;
+  }
+  &__form-group{
+    margin-bottom: 20px;
+  }
+  &__account{
+    margin-bottom: 30px;
+    word-break: break-all;
+    color: lighten($base-color, 40%);
+  }
+}
+
+
+
+
+
+
+
+
+

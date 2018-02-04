@@ -1,0 +1,336 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:100,300,500,700");
+/*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
+html {
+  line-height: 1.15;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0; }
+
+article, aside, footer, header, nav, section {
+  display: block; }
+
+h1 {
+  font-size: 2em;
+  margin: .67em 0; }
+
+figcaption, figure, main {
+  display: block; }
+
+figure {
+  margin: 1em 40px; }
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible; }
+
+pre {
+  font-family: monospace,monospace;
+  font-size: 1em; }
+
+a {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects; }
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration: underline dotted; }
+
+b, strong {
+  font-weight: inherit; }
+
+b, strong {
+  font-weight: bolder; }
+
+code, kbd, samp {
+  font-family: monospace,monospace;
+  font-size: 1em; }
+
+dfn {
+  font-style: italic; }
+
+mark {
+  background-color: #ff0;
+  color: #000; }
+
+small {
+  font-size: 80%; }
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sub {
+  bottom: -.25em; }
+
+sup {
+  top: -.5em; }
+
+audio, video {
+  display: inline-block; }
+
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+img {
+  border-style: none; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+button, input, optgroup, select, textarea {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0; }
+
+button, input {
+  overflow: visible; }
+
+button, select {
+  text-transform: none; }
+
+[type=reset], [type=submit], button, html [type=button] {
+  -webkit-appearance: button; }
+
+[type=button]::-moz-focus-inner, [type=reset]::-moz-focus-inner, [type=submit]::-moz-focus-inner, button::-moz-focus-inner {
+  border-style: none;
+  padding: 0; }
+
+[type=button]:-moz-focusring, [type=reset]:-moz-focusring, [type=submit]:-moz-focusring, button:-moz-focusring {
+  outline: 1px dotted ButtonText; }
+
+fieldset {
+  padding: .35em .75em .625em; }
+
+legend {
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal; }
+
+progress {
+  display: inline-block;
+  vertical-align: baseline; }
+
+textarea {
+  overflow: auto; }
+
+[type=checkbox], [type=radio] {
+  box-sizing: border-box;
+  padding: 0; }
+
+[type=number]::-webkit-inner-spin-button, [type=number]::-webkit-outer-spin-button {
+  height: auto; }
+
+[type=search] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px; }
+
+[type=search]::-webkit-search-cancel-button, [type=search]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit; }
+
+details, menu {
+  display: block; }
+
+summary {
+  display: list-item; }
+
+canvas {
+  display: inline-block; }
+
+template {
+  display: none; }
+
+[hidden] {
+  display: none; }
+
+/*# sourceMappingURL=normalize.min.css.map */
+body {
+  font-family: Raleway, arial, sans-serif;
+  background-color: white;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing: antialiased;
+  color: #292d2b; }
+
+/*-- START SCREEN --*/
+.Start {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  color: white;
+  background: transparent url("./../imgs/cover.jpg") no-repeat;
+  background-size: cover;
+  background-position: center center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch; }
+  .Start > * {
+    position: relative; }
+  .Start:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    background: #124c5e;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/$col1+0,7db9e8+100 */
+    background: #2aa79d;
+    /* Old browsers */
+    background: -moz-linear-gradient(-90deg, #2aa79d 0%, rgba(0, 209, 192, 0) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(-90deg, #2aa79d 0%, rgba(0, 209, 192, 0) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(-90deg, #2aa79d 0%, rgba(0, 209, 192, 0) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=#2aa79d, endColorstr=rgba(0, 209, 192, 0),GradientType=1 );
+    /* IE6-9 fallback on horizontal gradient */ }
+  .Start__inner {
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 90%; }
+  .Start__group {
+    width: 50%;
+    float: right;
+    display: table;
+    text-align: right; }
+  .Start__logo {
+    position: fixed;
+    left: 5%;
+    top: 5%;
+    left: calc( 50% - 500px); }
+    @media screen and (max-width: 1124px) {
+      .Start__logo {
+        left: 5%; } }
+  .Start__title {
+    font-size: 5.5em;
+    line-height: 0.9;
+    font-weight: 100; }
+  .Start__txt {
+    font-size: 1.6em;
+    line-height: 1.1;
+    font-weight: 500;
+    margin-top: 30px; }
+  .Start__btn-start {
+    float: right;
+    padding: 15px 30px;
+    background: #fff;
+    color: #15bcaf;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    margin-top: 50px;
+    cursor: pointer;
+    transition: all 200ms ease-in-out; }
+    .Start__btn-start:hover {
+      color: #fff;
+      background: #15bcaf; }
+    .Start__btn-start_inactive {
+      font-size: 1.2em;
+      text-transform: none;
+      background: transparent;
+      color: #fff;
+      cursor: default;
+      border: 1px solid #fff; }
+      .Start__btn-start_inactive:hover {
+        background: transparent;
+        color: #fff; }
+      .Start__btn-start_inactive a {
+        color: white;
+        font-weight: 700; }
+
+/*-- SIGN-IN  --*/
+.Sign {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(10, 199, 183, 0.7); }
+  .Sign__inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    max-width: 500px;
+    width: 90%;
+    max-height: 60vh;
+    overflow: auto;
+    background: #fff;
+    padding: 40px;
+    box-sizing: border-box; }
+  .Sign__title {
+    text-align: center;
+    font-weight: 700;
+    color: #00d1c0;
+    font-size: 2em;
+    margin-bottom: 30px; }
+  .Sign__btn-start {
+    float: right;
+    padding: 10px 25px;
+    background: #00d1c0;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    margin-top: 50px;
+    cursor: pointer;
+    transition: all 200ms ease-in-out; }
+    .Sign__btn-start:hover {
+      color: #fff;
+      background: #1fb2a6; }
+  .Sign__form {
+    width: 90%;
+    margin: 0 auto; }
+  .Sign__input {
+    border: 1px solid #00d1c0;
+    padding: 5px;
+    height: 40px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: all 200ms ease; }
+    .Sign__input:focus {
+      outline: 0;
+      border-bottom-width: 3px;
+      padding-bottom: 3px; }
+  .Sign__label {
+    color: #00d1c0;
+    margin-bottom: 10px; }
+  .Sign__form-group {
+    margin-bottom: 20px; }
+  .Sign__account {
+    margin-bottom: 30px;
+    word-break: break-all;
+    color: #8c9691; }
