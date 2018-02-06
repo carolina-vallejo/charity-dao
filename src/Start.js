@@ -9,16 +9,13 @@ import logo from './imgs/logo.svg';
 class Start extends Component {
   constructor(props){
     super(props)
-    this.handleClick = this.handleClick.bind(this);
+
   }
 
-  handleClick(e){ 
-    this.props.start(e);
-  }
+
 
   render() {
     var isUnlock=this.props.unlock;
-
 
     return (
       <div className="Start">
@@ -36,7 +33,7 @@ class Start extends Component {
 
               <div 
               className={`Start__btn-start ${this.props.className}`}
-              onClick={this.handleClick}>{this.props.text}</div>
+              onClick={this.props.onClick}>{this.props.text}</div>
 
               :
               <div className={

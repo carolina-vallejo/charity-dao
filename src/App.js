@@ -10,10 +10,13 @@ class App extends Component {
   constructor(props){
     super(props)
     this.state={
-      screen : 0
+      screen : 0,
+      nickname: ''
     }
-    this.start = this.start.bind(this);
-    this.nickname = this.nickname.bind(this);
+
+    this.start=this.start.bind(this);
+    this.nickname=this.nickname.bind(this);
+    
 
   }
   start(){
@@ -27,7 +30,9 @@ class App extends Component {
   }
 
   nickname(e){
-    console.log(e)
+    this.setState({
+      nickname : e.target.value
+    });
   }
 
   render() {
@@ -37,8 +42,8 @@ class App extends Component {
       render = <Start 
         unlock={true}
         className="Start__btn-start_active"
-        start={this.start} 
-        text="Start Founding"/>;
+        onClick={this.start} 
+        text="start donating"/>;
 
     } else if(this.state.screen===1) {
 
@@ -46,17 +51,15 @@ class App extends Component {
               key={'start'}
               unlock={true}
               className="Start__btn-start_active"
-              start={this.start} 
+              onClick={this.start} 
               text="Start Founding"/>,
-              <input key={'xxx'}
-               type="text"
-              onChange={this.nickname}/>,
               <Sign key={'sign'}
-              insertNickname={this.nickname}
-              start={this.start} />];
+              onChange={(e) => this.nickname(e)}
+              onClick={this.start}/>];
 
     } else {
-      render=<List start={this.start}/>;
+      render=<List start={this.start}
+        nickName={this.state.nickname} />;
     }
 
     return (

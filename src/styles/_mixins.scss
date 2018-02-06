@@ -1,34 +1,74 @@
 $global-width:1000px;
-
-@mixin flex-vm{
-		display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-orient: horizontal;
-	-webkit-box-direction: normal;
-	    -ms-flex-direction: row;
-	        flex-direction: row;
-	-ms-flex-wrap: nowrap;
-	    flex-wrap: nowrap;
-	-webkit-box-pack: start;
-	    -ms-flex-pack: start;
-	        justify-content: flex-start;
-	-webkit-box-align: center;
-	    -ms-flex-align: center;
-	        align-items: center;
-	-ms-flex-line-pack: stretch;
-	    align-content: stretch;
+@mixin flex-vm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+}
+@mixin flex-v($align){
+    display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: $align;
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
+}
+@mixin flex-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
 }
 
-@mixin gradient($col1,$col2, $deg){
-
-/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/$col1+0,7db9e8+100 */
-background: $col1; /* Old browsers */
-background: -moz-linear-gradient($deg, $col1 0%, $col2 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient($deg, $col1 0%,$col2 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient($deg, $col1 0%,$col2 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=#{unquote($col1)}, endColorstr=#{unquote($col2)},GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-
+@mixin gradient($col1, $col2, $deg) {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/$col1+0,7db9e8+100 */
+  background: $col1;
+  /* Old browsers */
+  background: -moz-linear-gradient($deg, $col1 0%, $col2 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient($deg, $col1 0%, $col2 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient($deg, $col1 0%, $col2 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=#{unquote($col1)}, endColorstr=#{unquote($col2)}, GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
 }
 
 //-- FONT SMOOTH
@@ -173,9 +213,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=#{unquote($col
   }
 }
 
-$cut-width: $global-width + 124px;
+$cut-width: $global-width+124px;
 @mixin pos_abs($prop, $factor) {
-  #{$prop}: calc( #{(100% / 2)} - #{($global-width / 2)} );
+  #{$prop}: calc( #{(100% / 2)} - #{($global-width / 2)});
   @media screen and (max-width: $global-width + 124px) {
     #{$prop}: ((100% / 2) - (90% / 2));
   }

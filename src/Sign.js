@@ -10,21 +10,15 @@ import PropTypes from 'prop-types';
 class Sign extends Component {
   constructor(props, context){
     super(props)
-    this.handleClick = this.handleClick.bind(this);
-    this.handleChange = this.handleChange.bind(this);
+
     this.context = context;
   }
 
-  handleClick(e){ 
-    this.props.start(e);
-  }
-
-  handleChange(e){
-    this.props.insertNickname(e);
-  }
 
   render() {
+    
     console.log(this.context.web3.accounts[0]);
+
     return (
       <div className="Sign">
         <div className="Sign__inner">
@@ -33,24 +27,27 @@ class Sign extends Component {
               Sign in
             </div>
             <div className="Sign__form">
-            <div className="Sign__account">
-              <div className="Sign__label">Wallet address:</div>
-                {this.context.web3.accounts[0]}
-            </div>            
+              <div className="Sign__account">
+                <div className="Sign__label">Wallet address:</div>
+                  {this.context.web3.accounts[0]}
+              </div>   
+              <div className="Sign__form-group">
+                <div className="Sign__label">
+                  Nickname:
+                </div>
+                <input className="Sign__input" 
+                  type="text"
+                  onChange={(e)=>this.props.onChange(e)}/>
+              </div>                         
               <div className="Sign__form-group">
                 <div className="Sign__label">Email:</div>
                 <input className="Sign__input" type="text"/>
               </div>
-              <div className="Sign__form-group">
-                <div className="Sign__label">Nickname:</div>
-                <input className="Sign__input" 
-                  type="text"
-                  onChange={this.handleChange}/>
-              </div>  
+
             </div>
             <div 
               className={`Sign__btn-start ${this.props.className}`}
-              onClick={this.handleClick}>Go</div>
+              onClick={()=>this.props.onClick()}>Go</div>
           </div>
         </div>
       </div>

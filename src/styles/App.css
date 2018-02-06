@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway:100,300,500,700");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:700");
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 html {
   line-height: 1.15;
@@ -214,7 +215,7 @@ body {
     /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(-90deg, #2aa79d 0%, rgba(0, 209, 192, 0) 100%);
     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=#2aa79d, endColorstr=rgba(0, 209, 192, 0),GradientType=1 );
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=#2aa79d, endColorstr=rgba(0, 209, 192, 0), GradientType=1);
     /* IE6-9 fallback on horizontal gradient */ }
   .Start__inner {
     max-width: 1000px;
@@ -287,7 +288,7 @@ body {
     transform: translate(-50%, -50%);
     max-width: 500px;
     width: 90%;
-    max-height: 60vh;
+    max-height: 80vh;
     overflow: auto;
     background: #fff;
     padding: 40px;
@@ -305,7 +306,7 @@ body {
     color: #fff;
     text-transform: uppercase;
     font-size: 1.2em;
-    margin-top: 50px;
+    margin-top: 30px;
     cursor: pointer;
     transition: all 200ms ease-in-out; }
     .Sign__btn-start:hover {
@@ -334,3 +335,184 @@ body {
     margin-bottom: 30px;
     word-break: break-all;
     color: #8c9691; }
+
+.List__inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  width: 90%; }
+
+.List__column {
+  margin: 0 -32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch; }
+
+.List__header {
+  padding-top: 30px;
+  border-bottom: 3px solid #ebebeb; }
+  .List__header::after, .List__header::before {
+    content: "";
+    display: table; }
+  .List__header::after {
+    clear: both; }
+
+.List__main {
+  padding-top: 60px; }
+
+.List__logo {
+  float: right;
+  margin-top: 15px;
+  border-bottom: 10px; }
+
+.List__user {
+  float: left;
+  position: relative;
+  min-height: 50px;
+  padding: 0 0 20px 65px; }
+  .List__user:before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: #00d1c0;
+    background-image: url("./../imgs/plant.svg");
+    background-repeat: no-repeat;
+    background-position: center bottom -5px;
+    background-size: 70%; }
+
+.List__name {
+  font-size: 1.7em;
+  font-weight: 700;
+  color: #727d78; }
+
+.List__wallet {
+  font-size: 1em;
+  font-weight: 300;
+  color: #a7aeab; }
+
+.Box {
+  width: 50%;
+  box-sizing: border-box;
+  padding: 0 32px;
+  float: left;
+  position: relative;
+  margin-bottom: 40px; }
+  @media only screen and (max-width: 768px) {
+    .Box {
+      width: 100%; } }
+  .Box__wrap-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 45%;
+    height: 100%;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch; }
+    .Box__wrap-img:after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.3); }
+    .Box__wrap-img img {
+      top: 0;
+      left: 0;
+      position: absolute;
+      object-fit: cover;
+      width: 100%;
+      height: 100%; }
+  .Box__title {
+    position: relative;
+    color: #fff;
+    box-sizing: border-box;
+    padding: 20px;
+    font-size: 1.7em;
+    line-height: 1;
+    font-weight: bold;
+    z-index: 1; }
+  .Box__text {
+    width: 55%;
+    float: right;
+    padding: 90px 30px 40px 30px;
+    box-sizing: border-box; }
+  .Box__extract {
+    font-weight: 300; }
+  .Box__inner {
+    position: relative;
+    background: #fff;
+    height: 100%;
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.2); }
+    .Box__inner::after, .Box__inner::before {
+      content: "";
+      display: table; }
+    .Box__inner::after {
+      clear: both; }
+  .Box__donation {
+    position: absolute;
+    right: 40px;
+    top: 20px;
+    text-align: right; }
+    .Box__donation-label {
+      font-weight: 700;
+      color: #c1c7c4; }
+    .Box__donation-number {
+      font-weight: 700;
+      color: #00d1c0;
+      font-size: 1.3rem;
+      font-family: "Open Sans"; }
+  .Box__more {
+    width: 40px;
+    height: 40px;
+    font-size: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-weight: 300;
+    color: #fff;
+    border-radius: 100%;
+    background: #00d1c0;
+    float: right;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: all 200ms ease; }
+    .Box__more:hover {
+      -webkit-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+      -moz-transform: scale(1.2);
+      transform: scale(1.2); }

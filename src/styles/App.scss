@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:100,300,500,700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:700');
+
 @import 'normalize';
 @import 'mixins';
 //---COLORS
-
 $global-color: #00d1c0;
 $base-color: #292d2b;
 //----GENERAL
@@ -127,13 +128,11 @@ body {
     -50%));
     max-width: 500px;
     width: 90%;
-    max-height: 60vh;
+    max-height: 80vh;
     overflow: auto;
     background: #fff;
     padding: 40px;
-    
     box-sizing: border-box;
-
   }
   &__title {
     text-align: center;
@@ -149,7 +148,7 @@ body {
     color: #fff;
     text-transform: uppercase;
     font-size: 1.2em;
-    margin-top: 50px;
+    margin-top: 30px;
     cursor: pointer;
     transition: all 200ms ease-in-out;
     &:hover {
@@ -157,43 +156,191 @@ body {
       background: desaturate($global-color, 30%);
     }
   }
-  &__form{
+  &__form {
     width: 90%;
     margin: 0 auto;
-
   }
-  &__input{
+  &__input {
     border: 1px solid $global-color;
     padding: 5px;
     height: 40px;
     width: 100%;
     box-sizing: border-box;
     transition: all 200ms ease;
-    &:focus{
+    &:focus {
       outline: 0;
       border-bottom-width: 3px;
       padding-bottom: 3px;
     }
   }
-  &__label{
-    color:$global-color;
+  &__label {
+    color: $global-color;
     margin-bottom: 10px;
   }
-  &__form-group{
+  &__form-group {
     margin-bottom: 20px;
   }
-  &__account{
+  &__account {
     margin-bottom: 30px;
     word-break: break-all;
     color: lighten($base-color, 40%);
   }
 }
 
+.List {
+  &__inner {
+    max-width: $global-width;
+    margin: 0 auto;
+    width: 90%;
+  }
+  &__column{
+    margin: 0 -32px;
+    @include flex-wrap;
+  }  
+  &__header {
+    padding-top: 30px;
+    border-bottom: 3px solid #ebebeb;
+    @include clearfix;
+  }
+  &__main {
+    padding-top: 60px;
+  }
+  &__logo{
+    float: right;
+    margin-top: 15px;
+    border-bottom: 10px;
+  }
+  &__user{
+    float: left;
+    position: relative;
+    min-height: 50px;
+    padding: 0 0 20px 65px;
+    &:before{
+      content: "";
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      width: 50px;
+      height: 50px;
+      border-radius: 100%;
+      background-color: $global-color;
+      background-image: url('./../imgs/plant.svg');
+      background-repeat: no-repeat;
+      background-position: center bottom -5px;
+      background-size: 70%;
+    }
+  }
+  &__name{
+    font-size: 1.7em;
+    font-weight: 700;
+    color: lighten($base-color, 30%);
+  }
+  &__wallet{
+    font-size: 1em;
+    font-weight: 300;
+    color: lighten($base-color, 50%);
+  }
+}
 
+.Box {
+  width: 50%;
+  box-sizing: border-box;
+  padding: 0 32px;
+  float: left;
+  position: relative;
+  margin-bottom: 40px;
 
+  @include mediaquery('max', 768px){
+    width: 100%;
+  }
+  &__wrap-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 45%;
+    height: 100%;
+    overflow: hidden;
+    @include flex-v(flex-end);
+    &:after{
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.3);
+    }
+    img {
+      top: 0;
+      left: 0;
+      position: absolute;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__title {
+    position: relative;
+    color: #fff;
+    box-sizing: border-box;
+    padding: 20px;
+    font-size: 1.7em;
+    line-height: 1;
+    font-weight: bold;
+    z-index: 1;
+  }
+  &__text {
+    width: 55%;
+    float: right;
+    padding: 90px 30px 40px 30px;
+    box-sizing: border-box;
+  }
+  &__extract{
+    font-weight: 300;
+  }
+  &__inner {
+    position: relative;
+    background: #fff;
+      height: 100%;
+    @include clearfix;
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.2);
+  }
+  &__donation{
+    position: absolute;
+    right: 40px;
+    top: 20px;
+    text-align: right;
+    &-label{
+      font-weight: 700;
+      color: lighten($base-color, 60%);
+    }
+    &-number{
+      font-weight: 700;
+      color: $global-color;
+      font-size: 1.3rem;
+      font-family: "Open Sans";
+    }
+  }
+  &__more{
+    width: 40px;
+    height: 40px;
+    font-size: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-weight: 300;
+    color: #fff;
+    border-radius: 100%;
+    background: $global-color;
+    float: right;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: all 200ms ease;
+    &:hover{
+      @include transform(scale(1.2));
+    }
 
+  }
 
-
-
-
-
+}
