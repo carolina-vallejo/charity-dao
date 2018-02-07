@@ -16,7 +16,6 @@ class App extends Component {
 
     this.start=this.start.bind(this);
     this.nickname=this.nickname.bind(this);
-    
 
   }
   start(){
