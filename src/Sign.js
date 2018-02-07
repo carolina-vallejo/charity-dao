@@ -1,11 +1,6 @@
 import React, { Component } from 'react';
-import { Web3Provider } from 'react-web3';
 import './styles/App.css';
-import logo from './imgs/logo-color.svg';
 import PropTypes from 'prop-types';
-
-
-
 
 class Sign extends Component {
   constructor(props, context){

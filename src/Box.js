@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
-import { Web3Provider } from 'react-web3';
 import './styles/App.css';
-import PropTypes from 'prop-types';
-
 
 class Box extends Component {
   constructor(props){
@@ -19,7 +16,7 @@ class Box extends Component {
       <div className="Box">
         <div className="Box__inner">
           <div className="Box__wrap-img">
-           <img src={this.props.img}/>
+            <img src={this.props.img} alt="foto"/>
             
             <div className="Box__title">Lorem ipsum dolor sit amet</div>
           </div>

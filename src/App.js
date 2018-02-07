@@ -20,12 +20,10 @@ class App extends Component {
 
   }
   start(){
-    console.log('xxx');
     this.setState(({screen}) => {
       return {
         screen : screen+=1
       }
-      
     })
   }
 
@@ -52,7 +50,7 @@ class App extends Component {
               unlock={true}
               className="Start__btn-start_active"
               onClick={this.start} 
-              text="Start Founding"/>,
+              text="start donating"/>,
               <Sign key={'sign'}
               onChange={(e) => this.nickname(e)}
               onClick={this.start}/>];

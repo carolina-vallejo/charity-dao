@@ -1,18 +1,9 @@
 import React, { Component } from 'react';
-import { Web3Provider } from 'react-web3';
 import './styles/App.css';
 import logo from './imgs/logo.svg';
 
 
-
-
 class Start extends Component {
-  constructor(props){
-    super(props)
-
-  }
-
-
 
   render() {
     var isUnlock=this.props.unlock;
@@ -20,7 +11,9 @@ class Start extends Component {
     return (
       <div className="Start">
         <div className="Start__inner">
-          <img className="Start__logo" src={logo}/>
+          <img className="Start__logo" 
+            src={logo}
+            alt="logo"/>
           <div className="Start__group">
             <div className="Start__title">
               Donate in confidence
@@ -42,7 +35,6 @@ class Start extends Component {
               </div>
 
             }
-            
           </div>
         </div>
       </div>

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Web3Provider } from 'react-web3';
 import './styles/App.css';
 import logo from './imgs/logo-color.svg';
 import PropTypes from 'prop-types';
@@ -9,8 +8,6 @@ function importAll(r) {
   return r.keys().map(r);
 }
 const images = importAll(require.context('./imgs/', false, /img\.(png|jpe?g|svg)$/));
-
-
 
 class List extends Component {
   constructor(props, context){
@@ -31,7 +28,9 @@ class List extends Component {
         <div className="List__header">
           <div className="List__inner">
             
-              <img className="List__logo" src={ logo}/>
+              <img className="List__logo" 
+                src={ logo}
+                alt="logo"/>
               <div className="List__user">
               <div className="List__name">
                 {nickName}
